@@ -25,7 +25,7 @@ export function FeedbackContentStep({
 
   function handleSubmitFeedback(event: FormEvent) {
     event.preventDefault();
-
+    setLoadingFeedback(true);
     api
       .post("/feedbacks", {
         type: feedbackType,
