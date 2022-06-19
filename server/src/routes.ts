@@ -20,6 +20,5 @@ routes.post("/feedbacks", async (req, res) => {
     comment,
     screenshot,
   });
-  console.log("ok");
   return res.status(201).send();
 });

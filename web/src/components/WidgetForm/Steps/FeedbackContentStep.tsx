@@ -33,14 +33,16 @@ export function FeedbackContentStep({
         screenshot,
       })
       .then((response) => {
-        if (response.status === 201) setLoadingFeedback(false);
+        if (response.status === 201) {
+          setLoadingFeedback(false);
+          onFeedbackSent();
+        }
       })
-      
+
       .catch((error) => {
         console.log(error);
         setLoadingFeedback(false);
       });
-    onFeedbackSent();
   }
 
   return (
