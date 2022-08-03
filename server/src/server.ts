@@ -10,6 +10,6 @@ app.use(express.json());
 
 app.use(routes);
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log("back-end rodando na porta ---> http://localhost:" + port);
 });
